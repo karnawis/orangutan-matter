@@ -29,7 +29,6 @@ $black		   : #000;
 }
 
 body {
-  padding-top: 20px;
   font-family: $josafine-sans;
 }
 
@@ -234,7 +233,7 @@ header {
   width: 40px;
 
   position: absolute;
-  top: 20px;
+  left: 20px;
   right: 20px;
   z-index: 9999999999999;
   &:hover {
@@ -261,7 +260,6 @@ header {
   }
 }
 header:not(.toggled) #burger-link{
-  background-color: $white !important;
   border-radius: 40px;
   position: fixed;
   margin-top: 20px;
@@ -300,6 +298,16 @@ header.toggled {
     }
   }
 }
+.container__social-media {
+  right:20px;
+  top:20px;
+  position: absolute;
+}
+
+.link__social-media {
+    margin:20px 10px 0px 10px;
+}
+
 /* BG */
 .bg-canvas {
   background: url(../img/binary.png) repeat center;
