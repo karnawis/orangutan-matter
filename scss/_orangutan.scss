@@ -231,9 +231,9 @@ header {
   display: block;
   height: 40px;
   width: 40px;
-
-  position: absolute;
-  left: 20px;
+  position: fixed;
+  margin-top: 20px;
+  outline: none;
   right: 20px;
   z-index: 9999999999999;
   &:hover {
@@ -261,8 +261,7 @@ header {
 }
 header:not(.toggled) #burger-link{
   border-radius: 40px;
-  position: fixed;
-  margin-top: 20px;
+  position: absolute;
 }
 
 header.toggled {
@@ -298,15 +297,32 @@ header.toggled {
     }
   }
 }
+
 .container__social-media {
-  right:20px;
-  top:20px;
+  display: block;
+  right:25px;
+  top:50px;
   position: absolute;
+  z-index: 9999999;
+
+  .link__social-media {
+    display: block;
+    margin: 10px;
+  }
+  
+  @media (min-width: 992px) {
+    right:60px;
+    top:25px;
+
+    .link__social-media {
+      display: inline-block;
+    }
+
+  }
+  
 }
 
-.link__social-media {
-    margin:20px 10px 0px 10px;
-}
+
 
 /* BG */
 .bg-canvas {
@@ -386,19 +402,19 @@ h1 {
   border: none;
   border-radius: 50px;
   display: block;
-  background: #fff url(../img/orangutan-logo-no-text.png) no-repeat;
-  background-position: center;
-  background-size: 85%;
   height: 60px;
   position: absolute;
   left: 20px;
   top:20px;
-  width: 60px;
+  width: 80px;
   z-index: 9999;
 
   @media (min-width: 992px) {
-    height: 80px;
-    width: 80px;
+    position: fixed;
+    width: 160px;
+  }
+  img {
+    width: 100%;
   }
 }
 
