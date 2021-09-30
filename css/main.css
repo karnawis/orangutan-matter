@@ -784,6 +784,10 @@ h1 {
   background-size: 100%;
 }
 
+.fixed-parallax .image.bg__character {
+  background-image: url(../img/orangutan-matter-jack-video-game-cicada-character.png);
+}
+
 .fixed-parallax .fixed-parallax-image--inside {
   bottom: 0;
   left: 0;
