@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - New Age v5.0.4 (https://startbootstrap.com/template-overviews/new-age)
- * Copyright 2013-2021 Start Bootstrap
+ * Copyright 2013-2022 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
 
@@ -295,7 +295,7 @@ h1, h2, h3, h4, h5, h6, .baumans, .shaky-link {
 }
 
 h2 {
-  color: #000;
+  color: #323232;
   margin-bottom: 30px;
   text-align: center;
   z-index: 99999999;
@@ -408,16 +408,18 @@ blockquote .brush-stroke {
 }
 
 .dark {
-  color: #040000;
+  color: #323232;
 }
 
 .bg-dark {
-  background-color: #040000;
+  background-color: #323232;
   color: #fff;
 }
 
 .bg-black {
   background-color: #000;
+  background-image: url(/img/bg__black-canvas.png);
+  background-image: url(/img/subtel-patterns.com_extra_clean_paper.png);
   color: #fff;
 }
 
@@ -790,8 +792,16 @@ h1 {
 
 .fixed-parallax .image.bg__character {
   background-image: url(../img/orangutan-matter-jack-video-game-cicada-character.png);
-  background-image: url(../img/jack-game-poster.png);
+  background-image: url(../img/unleaving-video-game-character-poster.png);
   background-size: 100%;
+}
+
+.fixed-parallax .image.bg__blue_yellow {
+  background-image: url(../img/unleaving-game-awake-1-scene-yellow-blue-background-jack-character.jpg);
+}
+
+.fixed-parallax .image.bg__blue-background {
+  background-image: url(../img/unleaving-video-game-blue-skies-thinking-rodin-rock.jpg);
 }
 
 .fixed-parallax .fixed-parallax-image--inside {

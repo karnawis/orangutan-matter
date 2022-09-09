@@ -10,12 +10,12 @@
 $orange :  #d6290f;
 $orange-light : #E74C3C;
 $white : #fff;
-$dark : #040000;
+$dark : #323232;
+$darker: #000;
 $space : 30px;
 $space-top : 40px;
 $baumans :  'Baumans', sans-serif;
 $josafine-sans : 'Josefin Sans', sans-serif;
-$black		   : #000;
 //Mixin
 @mixin transition($sec) {
   -webkit-transition: all $sec ease;
@@ -37,7 +37,7 @@ h1, h2, h3, h4 , h5 ,h6 , .baumans, .shaky-link {
   margin: 0;
 }
 h2 {
-  color: #000;
+  color: $dark;
   margin-bottom: $space;
   text-align: center;
   z-index: 99999999;
@@ -137,7 +137,9 @@ blockquote{
   color: $white;
 }
 .bg-black {
-  background-color: $black;
+  background-color: $darker;
+  background-image: url(/img/bg__black-canvas.png);
+  background-image: url(/img/subtel-patterns.com_extra_clean_paper.png);
   color: $white;
 }
 .spacing-m-t {
