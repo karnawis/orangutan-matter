@@ -32,54 +32,56 @@ body {
   font-family: $josafine-sans;
 }
 
+p {
+  font-family: $baumans, sans-serif;
+  font-size: 20px;
+}
+
 h1, h2, h3, h4 , h5 ,h6 , .baumans, .shaky-link {
   font-family: $baumans;
   margin: 0;
 }
-h2 {
-  color: $dark;
-  margin-bottom: $space;
-  text-align: center;
-  z-index: 99999999;
-  @media (min-width: 768px) {
-    display: block;
-    left: 2%;
-    height: 130px;
-    margin-bottom: 0;
-    position: absolute;
-    top: 30px;
-    width: 130px;
-    .text {
-      display: block;
-      font-size: 25px;
-      line-height: 130px;
-      position: absolute;
-      text-align: center;
-      vertical-align: middle;
-      width: 100%;
-      z-index: 9999;
-    }
-  }
-}
-.circle {
-  border-radius: 50%;
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: visibility .5s; /* Safari */
-  transition: visibility .5s;
-  visibility: hidden;
-  width: 100%;
-  z-index: 9;
-}
+// h2 {
+//   color: $dark;
+//   margin-bottom: $space;
+//   text-align: center;
+//   z-index: 99999999;
+//   @media (min-width: 768px) {
+//     display: block;
+//     left: 2%;
+//     height: 130px;
+//     margin-bottom: 0;
+//     position: absolute;
+//     top: 30px;
+//     width: 130px;
+//     .text {
+//       display: block;
+//       font-size: 25px;
+//       line-height: 130px;
+//       position: absolute;
+//       text-align: center;
+//       vertical-align: middle;
+//       width: 100%;
+//       z-index: 9999;
+//     }
+//   }
+// }
+// .circle {
+//   border-radius: 50%;
+//   display: block;
+//   height: 100%;
+//   position: absolute;
+//   -webkit-transition: visibility .5s; /* Safari */
+//   transition: visibility .5s;
+//   visibility: hidden;
+//   width: 100%;
+//   z-index: 9;
+// }
 
 .rounded-thumbnail {
   border-radius: 50%;
 }
 
-p {
-  font-size: 16px;
-}
 .fa {
   font-size: 40px;
   margin: 5px;
@@ -188,9 +190,13 @@ section {
 }
 //NAVIGATION
 header {
-  background-color: #ccc;
-  position: relative;
   width: 100%;
+  min-height: 100px;
+  z-index: 99999;
+  @media (min-width: 992px) {
+    background-color: rgba(255,255,255,.4);
+    position: fixed;
+  }
 
   nav{
     color: white;
@@ -312,17 +318,13 @@ header.toggled {
   z-index: 9999999;
 
   .link__social-media {
-    display: block;
+    display: inline-block;
     margin: 10px;
   }
   
   @media (min-width: 992px) {
     right:60px;
     top:25px;
-
-    .link__social-media {
-      display: inline-block;
-    }
 
   }
   
@@ -408,11 +410,10 @@ h1 {
   border: none;
   border-radius: 50px;
   display: block;
-  height: 60px;
   position: absolute;
   left: 20px;
   top:20px;
-  width: 80px;
+  width: 140px;
   z-index: 9999;
 
   @media (min-width: 992px) {
@@ -437,3 +438,23 @@ h1 {
   }
 }
 
+.figure-caption {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social__link_container {
+  font-size: 30px;
+    a {
+      margin-right: 20px;
+      color: $orange;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+          font-size: 20px;
+          text-decoration: none;
+          color: fade-out($orange, .7);
+      }
+  }
+}

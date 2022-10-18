@@ -247,33 +247,12 @@ section.contact ul.list-social li.social-google-plus a:hover {
 }
 
 footer {
-  color: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
   text-align: center;
 }
 
-footer p {
-  font-size: 18px;
+footer p, footer a {
   margin: 0;
-}
-
-footer ul {
-  margin-bottom: 0;
-}
-
-footer a {
-  margin-right: 20px;
-  font-size: 30px;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-footer a:hover, footer a:focus, footer a:active, footer a.active {
-  text-decoration: none;
-}
-
-@media (min-width: 992px) {
-  footer a {
-    font-size: 20px;
-  }
 }
 
 /* Project Orangutan Matter
@@ -289,59 +268,18 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+p {
+  font-family: "Baumans", sans-serif, sans-serif;
+  font-size: 20px;
+}
+
 h1, h2, h3, h4, h5, h6, .baumans, .shaky-link {
   font-family: "Baumans", sans-serif;
   margin: 0;
 }
 
-h2 {
-  color: #323232;
-  margin-bottom: 30px;
-  text-align: center;
-  z-index: 99999999;
-}
-
-@media (min-width: 768px) {
-  h2 {
-    display: block;
-    left: 2%;
-    height: 130px;
-    margin-bottom: 0;
-    position: absolute;
-    top: 30px;
-    width: 130px;
-  }
-  h2 .text {
-    display: block;
-    font-size: 25px;
-    line-height: 130px;
-    position: absolute;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    z-index: 9999;
-  }
-}
-
-.circle {
-  border-radius: 50%;
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: visibility .5s;
-  /* Safari */
-  transition: visibility .5s;
-  visibility: hidden;
-  width: 100%;
-  z-index: 9;
-}
-
 .rounded-thumbnail {
   border-radius: 50%;
-}
-
-p {
-  font-size: 16px;
 }
 
 .fa {
@@ -475,9 +413,16 @@ section {
 }
 
 header {
-  background-color: #ccc;
-  position: relative;
   width: 100%;
+  min-height: 100px;
+  z-index: 99999;
+}
+
+@media (min-width: 992px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+  }
 }
 
 header nav {
@@ -619,7 +564,7 @@ header.toggled nav ul {
 }
 
 .container__social-media .link__social-media {
-  display: block;
+  display: inline-block;
   margin: 10px;
 }
 
@@ -627,9 +572,6 @@ header.toggled nav ul {
   .container__social-media {
     right: 60px;
     top: 25px;
-  }
-  .container__social-media .link__social-media {
-    display: inline-block;
   }
 }
 
@@ -715,11 +657,10 @@ h1 {
   border: none;
   border-radius: 50px;
   display: block;
-  height: 60px;
   position: absolute;
   left: 20px;
   top: 20px;
-  width: 80px;
+  width: 140px;
   z-index: 9999;
 }
 
@@ -745,6 +686,26 @@ h1 {
   .frills-paint {
     min-height: 220px;
   }
+}
+
+.figure-caption {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social__link_container {
+  font-size: 30px;
+}
+
+.social__link_container a {
+  margin-right: 20px;
+  color: #d6290f;
+}
+
+.social__link_container a:hover, .social__link_container a:focus, .social__link_container a:active, .social__link_container a.active {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgba(214, 41, 15, 0.3);
 }
 
 .fixed-parallax .image {
@@ -785,40 +746,45 @@ h1 {
 }
 
 .fixed-parallax .image.video-game-poster {
-  background-image: url(../img/jack-game-awake-1-scene-yellow-blue-background-jack-character.jpg);
-  background-image: url(../img/JACK-Game-Poster.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/unleaving-poster-mobile.jpg);
+  background-image: url(../img/unleaving-poster-mobile-optamized.jpg);
+  background-position: bottom left;
   background-size: 100%;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .fixed-parallax .image.video-game-poster {
+    background-image: url(../img/unleaving-video-game-poster-image-orangutanmatter.jpg);
+    background-image: url(../img/unleaving-video-game-poster-image-orangutanmatter-no-text.jpg);
+    background-image: url(../img/unleaving-video-game-poster-image-orangutanmatter-no-text-optamized.jpg);
+  }
 }
 
 .fixed-parallax .image.bg__character {
   background-image: url(../img/orangutan-matter-jack-video-game-cicada-character.png);
-  background-image: url(../img/unleaving-video-game-character-poster.png);
   background-size: 100%;
 }
 
-.fixed-parallax .image.bg__blue_yellow {
-  background-image: url(../img/unleaving-game-awake-1-scene-yellow-blue-background-jack-character.jpg);
-}
-
-.fixed-parallax .image.bg__blue-background {
-  background-image: url(../img/unleaving-video-game-blue-skies-thinking-rodin-rock.jpg);
-}
-
 .fixed-parallax .fixed-parallax-image--inside {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
   display: block;
   position: absolute;
-  width: 50%;
+  width: 60%;
+  bottom: 10%;
+  right: 7%;
   height: auto;
-  z-index: 999999;
+  z-index: 999;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 768px) {
   .fixed-parallax .fixed-parallax-image--inside {
-    width: 70%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    width: 80%;
   }
 }
 
@@ -854,7 +820,6 @@ h1 {
 }
 
 .btn {
-  border-radius: 300px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
